@@ -47,27 +47,27 @@ const PageHeaderMediaCarousel = (props: PageHeaderMediaCarouselProps): React.Rea
         className="carousel slide"
         data-ride="carousel"
       >
-        {props.fields.data.datasource.fields.map(
-          (ref, idx) =>
-            isNonEmptyArray(ref?.jsonValue) && (
-              <ol key={idx} className="carousel-indicators">
-                {ref.jsonValue.map((_item, index) => (
-                  <li
-                    key={index}
-                    data-target="#carousel{index}"
-                    data-slide-to={index}
-                    className={index === 0 ? 'active' : ''}
-                  ></li>
-                ))}
-              </ol>
-            )
-        )}
+        {(() => {
+          const firstValidRef = props.fields.data.datasource.fields.find(ref => isNonEmptyArray(ref?.jsonValue));
+          return firstValidRef && (
+            <ol className="carousel-indicators">
+              {firstValidRef.jsonValue.map((_item, index) => (
+                <li
+                  key={index}
+                  data-target="#carousela3acf7a2624c4483b85d2de0c451ab6f"
+                  data-slide-to={index}
+                  className={index === 0 ? 'active' : ''}
+                ></li>
+              ))}
+            </ol>
+          );
+        })()}
         {props.fields.data.datasource.fields.map(
           (ref, idx) =>
             isNonEmptyArray(ref?.jsonValue) && (
               <div key={idx} className="carousel-inner" role="listbox">
                 {ref.jsonValue.map((item, index) => (
-                  <div key={index} className="item active">
+                  <div key={index} className={`item ${index === 0 ? 'active' : ''}`}>
                     <div
                       className="jumbotron jumbotron-xl bg-media"
                       style={{
