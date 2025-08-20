@@ -1,3 +1,21 @@
+//==============================================================================
+// CSS Custom Properties (from static files)
+//==============================================================================
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-light: #f8f9fa;
+  --border-color: #dee2e6;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+//==============================================================================
+// Typography Scale (Enhanced)
+//==============================================================================
 $text-size-14: 14px;
 $text-size-16: 16px;
 $text-size-18: 18px;
@@ -7,4 +25,29 @@ $text-size-36: 36px;
 $text-size-48: 48px;
 $text-size-50: 50px;
 
+//==============================================================================
+// Habitat Brand Colors (from static files integration)
+//==============================================================================
+$habitat-primary: #c8244f;
+$habitat-primary-hover: #871835;
+$habitat-text: #2c3e50;
+$habitat-bg: #2e384e;
+$habitat-bg-light: #ffffff;
+
+// Legacy
 $main-color: #27272A;
+
+// Static files color system (SCSS variables for functions)
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$text-light-color: #7f8c8d;
+$background-light-color: #f8f9fa;
+$border-color: #dee2e6;
+$white-color: #ffffff;
+
+//==============================================================================
+// Font Settings (Work Sans from static files)
+//==============================================================================
+$font-family-primary: 'Work Sans', sans-serif;
+$font-family-base: $font-family-primary;

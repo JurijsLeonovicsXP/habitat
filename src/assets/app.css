@@ -38,6 +38,9 @@ a:hover {
 /* Page header full width - override niteflight theme */
 body .page-header {
   width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
 /* Bootstrap 3 Carousel Styles */
