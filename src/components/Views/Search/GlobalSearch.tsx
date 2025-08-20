@@ -19,7 +19,7 @@ const GlobalSearch = (): React.ReactElement => {
         <a
           href="#"
           className="btn navbar-toggle-search"
-          data-toggle-className="is-searching"
+          data-toggle-classname="is-searching"
           data-target="#mainNavbar"
         >
           <span className="glyphicon glyphicon-search"></span>
