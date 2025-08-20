@@ -57,6 +57,23 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
     <>
       {route && <Placeholder name="head" rendering={route} />}
       <Scripts />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        strategy="beforeInteractive"
+      ></Script>
+      <Script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        strategy="beforeInteractive"
+      ></Script>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        strategy="beforeInteractive"
+      ></Script>
+      <Script
+        id="ensure-jquery"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: 'window.$ = window.jQuery = window.$ || window.jQuery;' }}
+      />
       <Script src="/scripts/Sitecore.Foundation.Frameworks.min.js"></Script>
       <Script src="/scripts/Sitecore.Foundation.Theming.min.js"></Script>
       <link href="/styles/vendor.min.css" rel="stylesheet" />

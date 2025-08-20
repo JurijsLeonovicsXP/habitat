@@ -28,11 +28,10 @@ export const Default: React.FC<PageContentHeaderTitleProps> = (props): React.Rea
       <div className="container m-b-1">
         <h1>
           <Text field={titleField} className="page-title" />
-          <br />
-          <small>
-            <RichText field={summaryField} className="page-title" />
-          </small>
         </h1>
+        <div className="lead">
+          <RichText field={summaryField} className="page-title" />
+        </div>
       </div>
     </>
   );

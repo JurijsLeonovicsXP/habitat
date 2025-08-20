@@ -1,4 +1,4 @@
-﻿import { DictionaryPhrases, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
+﻿import { DictionaryPhrases, RichText, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import React from 'react';
 import { useI18n } from 'next-localization';
 
@@ -51,11 +51,9 @@ const PageTeaser = (props: PageTeaserProps): React.ReactElement => {
         </a>
         <div className="caption">
           <h3 className="teaser-heading">
-            <RichText field={model.Title} />
+            <Text field={model.Title} />
           </h3>
-          <p>
-            <RichText field={model.Summary} />
-          </p>
+          <RichText field={model.Summary} />
           <a href={model.url.url} className="btn btn-default">
             {translations.readLabel}
           </a>
