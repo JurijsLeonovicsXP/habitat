@@ -35,6 +35,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Page header full width - override niteflight theme */
+body .page-header {
+  width: 100% !important;
+}
+
 /* Bootstrap 3 Carousel Styles */
 .carousel {
   position: relative;
@@ -225,7 +230,6 @@ a:hover {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000\9;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
   border-radius: 10px;
